@@ -17,7 +17,7 @@
     </nav>
 
     <article>
-        <h1>Redux Form</h1>
+        <h1>Redux Form v8.3.0</h1>
         <h5>Step #1</h5>
         <p>Get ready with npm-create-react app</p>
         <h5>Step #2</h5>
@@ -40,12 +40,17 @@
             import { Provider } from 'redux-form';
         </pre>
         <p>Import this store/index.jsx in App.js</p>
-        <p>And wrap <App /> with <Provider> tag and pass store as value</p>
+        <p>And wrap &ltApp /&gt with &ltProvider&gt tag and pass store as value</p>
         <pre>
-             <Provider store={store}>
-                 <App />
-             </Provider>,
+             &ltProvider store={store}&gt
+                 &ltApp /&gt
+             &lt/Provider&gt,
             document.getElementById('root')
+        </pre>
+        <h5>Step #4</h5>
+        <p>In &ltApp/&gt import reduxForm, fields</p>
+        <pre>
+            import { reduxForm, fields} from 'redux-form';
         </pre>
     </article>
 </section>
