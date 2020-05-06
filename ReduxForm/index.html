@@ -18,7 +18,35 @@
 
     <article>
         <h1>Redux Form</h1>
-        <p>This is introduction Redux form</p>
+        <h5>Step #1</h5>
+        <p>Get ready with npm-create-react app</p>
+        <h5>Step #2</h5>
+        <p>Create a new directory 'store' in src folder</p>
+        <pre>
+            import { createStore, combineReducers } from 'redux'
+            import { reducer as formReducer } from 'redux-form'
+
+            const rootReducer = combineReducers({
+                // ...your other reducers here
+                form: formReducer
+            })
+            const store = createStore(rootReducer)
+
+            export default store;
+        </pre>
+        <h5>Step #3</h5>
+        <p>Import provider from redux-form</p>
+        <pre>
+            import { Provider } from 'redux-form';
+        </pre>
+        <p>Import this store/index.jsx in App.js</p>
+        <p>And wrap <App /> with <Provider> tag and pass store as value</p>
+        <pre>
+             <Provider store={store}>
+                 <App />
+             </Provider>,
+            document.getElementById('root')
+        </pre>
     </article>
 </section>
 
