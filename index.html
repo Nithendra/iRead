@@ -6,6 +6,20 @@
 <body>
 
 <h1>Redux Form</h1>
+<h2>Step-1: Create Reducer</h2>
+<pre>
+    import { createStore, combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
+
+const rootReducer = combineReducers({
+  // ...your other reducers here
+  form: formReducer
+})
+
+const store = createStore(rootReducer)
+
+export default store;
+</pre>
 
 </body>
 </html>
